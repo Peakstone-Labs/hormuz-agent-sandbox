@@ -1,4 +1,5 @@
 import { ref, computed } from 'vue'
+import { API_BASE } from '../api'
 
 const locale = ref(localStorage.getItem('hormuz_locale') || 'en')
 const strings = ref({})
@@ -7,7 +8,7 @@ const loaded = ref(false)
 export function useI18n() {
   async function loadStrings(loc) {
     try {
-      const res = await fetch(`/api/i18n?locale=${loc}`)
+      const res = await fetch(`${API_BASE}/api/i18n?locale=${loc}`)
       const data = await res.json()
       strings.value = data.strings
       loaded.value = true

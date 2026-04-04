@@ -102,6 +102,7 @@ import { ref, reactive, computed, onMounted } from 'vue'
 import { useI18n } from './composables/useI18n'
 import { useSimulation } from './composables/useSimulation'
 import { useTrial } from './composables/useTrial'
+import { API_BASE } from './api'
 import ConfigPanel from './components/ConfigPanel.vue'
 import SimOutput from './components/SimOutput.vue'
 
@@ -145,7 +146,7 @@ const showOutput = computed(() => {
 
 onMounted(async () => {
   try {
-    const res = await fetch(`/api/presets?locale=${locale.value}`)
+    const res = await fetch(`${API_BASE}/api/presets?locale=${locale.value}`)
     const data = await res.json()
     scenario.value = data.scenario
     actors.value = data.actors

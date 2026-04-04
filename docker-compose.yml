@@ -1,0 +1,11 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - TRIAL_MODEL=gemini/gemini-3-flash-preview
+      - FREE_TRIAL_LIMIT=10
+      - DAILY_LLM_LIMIT=1000
+    restart: unless-stopped

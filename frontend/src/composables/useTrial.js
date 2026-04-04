@@ -1,6 +1,6 @@
 import { ref } from 'vue'
 
-const FREE_LIMIT = 9999 // TODO: set back to 3 for production
+const FREE_LIMIT = 10
 
 function getOrCreateUUID() {
   let uuid = localStorage.getItem('hormuz_uuid')

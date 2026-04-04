@@ -1,4 +1,5 @@
 import { ref } from 'vue'
+import { API_BASE } from '../api'
 
 export function useSimulation() {
   const status = ref('idle') // idle | running | round_done | error
@@ -26,7 +27,7 @@ export function useSimulation() {
     }
 
     try {
-      const res = await fetch('/api/simulate', {
+      const res = await fetch(`${API_BASE}/api/simulate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
