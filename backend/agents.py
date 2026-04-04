@@ -252,6 +252,7 @@ async def run_single_round(
         )
 
         output = None
+        last_err = None
         for attempt in range(2):  # 1 original + 1 retry
             try:
                 raw = await _llm_call(messages, model, api_key)
@@ -291,6 +292,7 @@ async def run_single_round(
     )
 
     market = None
+    last_market_err = None
     for attempt in range(2):
         try:
             raw = await _llm_call(market_messages, model, api_key)
@@ -305,7 +307,7 @@ async def run_single_round(
         market = MarketUpdate(
             oil_price=oil_price,
             escalation_index=0.5,
-            commentary=f"Market data unavailable: {e}",
+            commentary=f"Market data unavailable: {last_market_err}",
         )
 
     oil_price = market.oil_price
