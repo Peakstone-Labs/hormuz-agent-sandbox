@@ -76,6 +76,14 @@ body {
 .nav-terminal .nav-title .accent {
   color: var(--color-neon-red);
 }
+.github-link {
+  color: #3a3a4a;
+  transition: color 0.2s;
+  display: flex;
+}
+.github-link:hover {
+  color: var(--color-text-primary);
+}
 .nav-terminal .btn-locale {
   background: transparent;
   border: 1px solid #2a2a3a;
