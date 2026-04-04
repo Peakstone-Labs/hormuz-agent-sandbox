@@ -12,7 +12,7 @@
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://python.org)
 [![Vue 3](https://img.shields.io/badge/Vue-3-green.svg)](https://vuejs.org)
 
-[Live Demo](https://www.peakstone-labs.com/hormuz_simulator) · [Report Bug](https://github.com/Peakstone-Labs/hormuz-agent-sandbox/issues) · [Add a Country](#add-a-new-country)
+[**▶ Play Now**](https://www.peakstone-labs.com/hormuz_simulator) · [Report Bug](https://github.com/Peakstone-Labs/hormuz-agent-sandbox/issues) · [Add a Country](#add-a-new-country)
 
 **[English](#what-is-this)** | **[中文](#zh-cn)**
 
@@ -41,7 +41,7 @@ You configure the chaos level, activate scenario modifiers ("tags"), adjust each
 - 🌐 **Bilingual** — full Chinese/English support (UI + LLM output)
 - 📊 **Shareable report cards** — download as image with QR code
 - 🔑 **BYOK** — bring your own API key, supports 8+ models
-- 🆓 **Free trial pool** — powered by Gemini Flash
+- 🆓 **Free trial pool** — 20 free rounds powered by DeepSeek V3
 
 <div align="center">
 <img src="https://img.shields.io/badge/Gemini-Flash-blue?logo=google" />
@@ -219,10 +219,10 @@ Edit `backend/presets.json` to change the background briefing, initial oil price
 
 | Provider | Models | Notes |
 |----------|--------|-------|
-| Google Gemini | `gemini/gemini-3-flash-preview`, `gemini/gemini-2.5-pro-preview-05-06` | Free trial default |
+| Google Gemini | `gemini/gemini-3-flash-preview`, `gemini/gemini-2.5-pro-preview-05-06` | Requires non-HK/CN region |
+| DeepSeek | `deepseek/deepseek-chat`, `deepseek/deepseek-reasoner` | **Free trial default** |
 | OpenAI | `gpt-4o`, `gpt-4o-mini`, `o3-mini` | Best structured output |
 | Anthropic | `claude-sonnet-4-6`, `claude-haiku-4-5-20251001` | Strong reasoning |
-| DeepSeek | `deepseek/deepseek-chat`, `deepseek/deepseek-reasoner` | Cheapest option |
 
 BYOK users select their model in the UI. The backend uses [LiteLLM](https://github.com/BerriAI/litellm) for unified model access.
 
@@ -323,7 +323,7 @@ MIT License. See [LICENSE](LICENSE) for details.
 - 🌐 **中英双语** — UI + LLM 输出完整支持
 - 📊 **可分享的报告卡片** — 下载为图片，带二维码
 - 🔑 **BYOK 自带密钥**，支持 8+ 模型
-- 🆓 **免费试玩池** — 由 Gemini Flash 驱动
+- 🆓 **免费试玩池** — 20 轮免费，由 DeepSeek V3 驱动
 
 ### 快速开始
 
