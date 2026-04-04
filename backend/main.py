@@ -37,30 +37,11 @@ I18N_PATH = Path(__file__).parent / "i18n.json"
 I18N = json.loads(I18N_PATH.read_text(encoding="utf-8"))
 
 FREE_TRIAL_LIMIT = int(os.getenv("FREE_TRIAL_LIMIT", "10"))
-DAILY_LLM_LIMIT = int(os.getenv("DAILY_LLM_LIMIT", "1000"))
 TRIAL_MODEL = os.getenv("TRIAL_MODEL", DEFAULT_MODEL)
 
 # In-memory trial counter: {uuid: count}
 trial_counter: dict[str, int] = defaultdict(int)
 
-# Daily LLM call counter (resets at midnight UTC)
-_daily_llm_calls = 0
-_daily_llm_date = ""
-
-
-def _check_and_increment_daily() -> bool:
-    """Returns True if under daily limit, increments counter."""
-    global _daily_llm_calls, _daily_llm_date
-    from datetime import datetime, timezone
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    if today != _daily_llm_date:
-        _daily_llm_calls = 0
-        _daily_llm_date = today
-    if _daily_llm_calls >= DAILY_LLM_LIMIT:
-        return False
-    # Each round = ~5 LLM calls (4 actors + 1 market)
-    _daily_llm_calls += 5
-    return True
 
 # ---------------------------------------------------------------------------
 # App
@@ -129,16 +110,6 @@ async def get_presets(locale: str = "en"):
 @app.post("/api/simulate")
 async def simulate(req: SimulationRequest):
     """Main simulation endpoint. Returns an SSE stream."""
-
-    # --- Daily limit check (applies to trial pool only) ---
-    if not req.api_key and not _check_and_increment_daily():
-        raise HTTPException(
-            status_code=429,
-            detail={
-                "error": "DAILY_LIMIT_REACHED",
-                "message": "Daily server capacity reached. Please try again tomorrow or provide your own API key.",
-            },
-        )
 
     # --- Determine model & key ---
     if req.api_key:
