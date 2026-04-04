@@ -12,7 +12,7 @@
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://python.org)
 [![Vue 3](https://img.shields.io/badge/Vue-3-green.svg)](https://vuejs.org)
 
-[**▶ Play Now**](https://www.peakstone-labs.com/hormuz_simulator) · [Report Bug](https://github.com/Peakstone-Labs/hormuz-agent-sandbox/issues) · [Add a Country](#add-a-new-country)
+[**▶ Play Now**](https://game.peakstone-labs.com) · [Report Bug](https://github.com/Peakstone-Labs/hormuz-agent-sandbox/issues) · [Add a Country](#add-a-new-country)
 
 **[English](#what-is-this)** | **[中文](#zh-cn)**
 

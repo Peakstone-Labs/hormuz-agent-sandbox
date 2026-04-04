@@ -86,7 +86,7 @@ import { useI18n } from '../composables/useI18n'
 
 const { locale } = useI18n()
 
-const GAME_URL = 'https://www.peakstone-labs.com/hormuz_simulator'
+const GAME_URL = 'https://game.peakstone-labs.com'
 const qrDataUrl = ref(null)
 
 onMounted(async () => {
