@@ -20,3 +20,6 @@ Thumbs.db
 
 # Reports (user content, not for repo)
 reports/
+
+# Videos (keep only GIF for README)
+videos/*.mp4

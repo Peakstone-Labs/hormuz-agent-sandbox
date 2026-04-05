@@ -8,6 +8,8 @@
 
 *Each nation is an independent AI agent. Tune the parameters. Watch the game theory emerge.*
 
+<img src="videos/demo.gif" alt="Demo" width="700" />
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-cyan.svg)](#license)
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://python.org)
 [![Vue 3](https://img.shields.io/badge/Vue-3-green.svg)](https://vuejs.org)
