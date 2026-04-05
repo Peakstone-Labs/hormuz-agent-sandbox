@@ -101,7 +101,7 @@ You configure the chaos level, activate scenario modifiers ("tags"), adjust each
 
 ```bash
 git clone https://github.com/Peakstone-Labs/hormuz-agent-sandbox.git
-cd hormuz-simulator/backend
+cd hormuz-agent-sandbox/backend
 
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
@@ -262,19 +262,19 @@ Returns SSE stream with events: `actor`, `market`, `round_complete`.
 
 ## Deployment
 
-### Docker (Recommended)
+### Docker
 
 ```bash
+cd backend
 docker build -t hormuz-sim .
 docker run -p 8000:8000 -e GEMINI_API_KEY=your-key hormuz-sim
 ```
 
-### VPS + Cloudflare
+### Manual
 
-1. Deploy backend to a VPS (Hetzner/Vultr, ~$5/mo)
+1. Deploy the backend to any VPS or cloud server
 2. Build frontend: `cd frontend && npm run build`
-3. Serve `frontend/dist/` via FastAPI or Nginx
-4. Point `api.peakstone-labs.com` → VPS IP via Cloudflare (orange cloud)
+3. Serve `frontend/dist/` via the backend or a reverse proxy
 
 ---
 
@@ -288,7 +288,7 @@ docker run -p 8000:8000 -e GEMINI_API_KEY=your-key hormuz-sim
 
 ## License
 
-MIT License. See [LICENSE](LICENSE) for details.
+MIT License.
 
 ---
 
@@ -332,7 +332,7 @@ MIT License. See [LICENSE](LICENSE) for details.
 ```bash
 # 克隆项目
 git clone https://github.com/Peakstone-Labs/hormuz-agent-sandbox.git
-cd hormuz-simulator
+cd hormuz-agent-sandbox
 
 # 后端
 cd backend
