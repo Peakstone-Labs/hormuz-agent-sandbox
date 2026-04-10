@@ -56,6 +56,14 @@
             </p>
           </div>
           <p v-else class="scenario-desc">{{ scenario.description }}</p>
+          <div class="scenario-meta">
+            <span class="scenario-cutoff" v-if="scenario.cutoff_date">
+              {{ locale === 'zh' ? '信息截止' : 'Info cutoff' }}: {{ scenario.cutoff_date }}
+            </span>
+            <button class="scenario-bg-btn" @click="openBackground">
+              {{ locale === 'zh' ? '查看完整背景 →' : 'View full background →' }}
+            </button>
+          </div>
         </div>
 
         <ConfigPanel
@@ -106,8 +114,13 @@
           <p class="boot-line visible" style="animation-delay: 1.8s">  [ESCALATION]       Index: 0.85 / 1.00</p>
           <p class="boot-line visible" style="animation-delay: 2.1s">  [ACTORS]           4 loaded</p>
           <p class="boot-line visible" style="animation-delay: 2.4s">  [TAGS]             11 available</p>
-          <p class="boot-line visible" style="animation-delay: 2.7s">&nbsp;</p>
-          <p class="boot-line visible" style="animation-delay: 3.0s">$ awaiting simulation parameters...<span class="boot-cursor"></span></p>
+          <p class="boot-line visible" style="animation-delay: 2.7s">  [INFO CUTOFF]      {{ scenario.cutoff_date || '----------' }}</p>
+          <p class="boot-line visible" style="animation-delay: 3.0s">&nbsp;</p>
+          <p class="boot-line visible" style="animation-delay: 3.3s">
+            $ <button class="boot-link" @click="openBackground">view-background --full</button>
+          </p>
+          <p class="boot-line visible" style="animation-delay: 3.6s">&nbsp;</p>
+          <p class="boot-line visible" style="animation-delay: 3.9s">$ awaiting simulation parameters...<span class="boot-cursor"></span></p>
         </div>
       </main>
     </div>
@@ -117,6 +130,13 @@
       {{ locale === 'zh' ? '由' : 'Powered by' }}
       <a href="https://www.peakstone-labs.com" target="_blank" class="footer-link">Peakstone Labs</a>
     </footer>
+
+    <BackgroundModal
+      :open="backgroundOpen"
+      :content="backgroundContent"
+      :initial-locale="locale"
+      @close="backgroundOpen = false"
+    />
   </div>
 </template>
 
@@ -128,6 +148,7 @@ import { useTrial } from './composables/useTrial'
 import { API_BASE } from './api'
 import ConfigPanel from './components/ConfigPanel.vue'
 import SimOutput from './components/SimOutput.vue'
+import BackgroundModal from './components/BackgroundModal.vue'
 
 const { locale, t, setLocale } = useI18n()
 const { clientUUID, consume, canTrial } = useTrial()
@@ -136,9 +157,28 @@ const {
   runRound, stop, reset,
 } = useSimulation()
 
-const scenario = ref({ name: '', description: '', initial_oil_price: 110 })
+const scenario = ref({ name: '', description: '', initial_oil_price: 110, cutoff_date: '' })
 const actors = ref({})
 const tags = ref({})
+
+const backgroundOpen = ref(false)
+const backgroundContent = ref({ en: '', zh: '' })
+const backgroundLoaded = ref(false)
+
+async function openBackground() {
+  if (!backgroundLoaded.value) {
+    try {
+      const res = await fetch(`${API_BASE}/api/scenario-background`)
+      const data = await res.json()
+      backgroundContent.value = data.content
+      backgroundLoaded.value = true
+    } catch (e) {
+      console.error('Failed to load background:', e)
+      return
+    }
+  }
+  backgroundOpen.value = true
+}
 
 const config = reactive({
   apiKey: '',

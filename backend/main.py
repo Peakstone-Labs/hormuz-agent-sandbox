@@ -29,6 +29,13 @@ logger = logging.getLogger(__name__)
 PRESETS_PATH = Path(__file__).parent / "presets.json"
 PRESETS = json.loads(PRESETS_PATH.read_text(encoding="utf-8"))
 
+BACKGROUND_DIR = Path(__file__).parent
+SCENARIO_BACKGROUND = {
+    "en": (BACKGROUND_DIR / "scenario_background.md").read_text(encoding="utf-8"),
+    "zh": (BACKGROUND_DIR / "scenario_background_zh.md").read_text(encoding="utf-8"),
+}
+SCENARIO_CUTOFF_DATE = "2026-04-10"
+
 # Load souls and tags from markdown files
 ACTORS = load_souls()
 TAGS = load_tags()
@@ -78,6 +85,15 @@ async def get_i18n(locale: str = "en"):
     return {"locale": loc, "strings": I18N.get(loc, I18N["en"])}
 
 
+@app.get("/api/scenario-background")
+async def get_scenario_background():
+    """Return the full scenario background markdown for both supported locales."""
+    return {
+        "cutoff_date": SCENARIO_CUTOFF_DATE,
+        "content": SCENARIO_BACKGROUND,
+    }
+
+
 @app.get("/api/presets")
 async def get_presets(locale: str = "en"):
     """Return scenario config, actors, and available tags for the frontend.
@@ -93,6 +109,7 @@ async def get_presets(locale: str = "en"):
             "briefing": i18n_scenario.get("briefing", []),
             "start_date": scenario["start_date"],
             "initial_oil_price": scenario["initial_oil_price"],
+            "cutoff_date": SCENARIO_CUTOFF_DATE,
         },
         "actors": {
             actor_id: localize_actor(cfg, loc)
@@ -160,7 +177,7 @@ async def simulate(req: SimulationRequest):
                 step_unit=req.step_unit,
                 model=model,
                 api_key=api_key,
-                background=PRESETS["scenario"].get("background", ""),
+                background=SCENARIO_BACKGROUND["en"],
                 actor_tag_injections=actor_tag_injections,
                 market_tag_injection=market_tag_inj,
                 previous_summaries=req.previous_summaries,
