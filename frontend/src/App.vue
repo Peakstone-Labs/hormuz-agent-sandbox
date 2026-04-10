@@ -110,7 +110,7 @@
           <p class="boot-line visible" style="animation-delay: 0.6s">&nbsp;</p>
           <p class="boot-line visible" style="animation-delay: 0.9s">$ cat /scenario/briefing.txt</p>
           <p class="boot-line visible" style="animation-delay: 1.2s">  [STRAIT OF HORMUZ] Status: BLOCKED</p>
-          <p class="boot-line visible" style="animation-delay: 1.5s">  [OIL MARKET]       Brent: $110.00/bbl</p>
+          <p class="boot-line visible" style="animation-delay: 1.5s">  [OIL MARKET]       Brent: $96.00/bbl</p>
           <p class="boot-line visible" style="animation-delay: 1.8s">  [ESCALATION]       Index: 0.85 / 1.00</p>
           <p class="boot-line visible" style="animation-delay: 2.1s">  [ACTORS]           4 loaded</p>
           <p class="boot-line visible" style="animation-delay: 2.4s">  [TAGS]             11 available</p>
