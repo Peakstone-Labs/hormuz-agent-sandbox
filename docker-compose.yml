@@ -4,6 +4,7 @@ services:
     ports:
       - "8000:8000"
     environment:
+      - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY}
       - GEMINI_API_KEY=${GEMINI_API_KEY}
       - TRIAL_MODEL=deepseek/deepseek-v4-flash
       - FREE_TRIAL_LIMIT=10
