@@ -22,5 +22,9 @@ Thumbs.db
 # Reports (user content, not for repo)
 reports/
 
+# Private operations notes (contains real secrets, IPs)
+OPERATION.md
+OPERATIONS.md
+
 # Videos (keep only GIF for README)
 videos/*.mp4
