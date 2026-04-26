@@ -184,7 +184,7 @@ const config = reactive({
   apiKey: '',
   chaosFactor: 0.5,
   stepUnit: 'day',
-  model: 'gemini/gemini-3-flash-preview',
+  model: 'deepseek/deepseek-v4-flash',
   activeTags: [],
   profiles: {},
 })

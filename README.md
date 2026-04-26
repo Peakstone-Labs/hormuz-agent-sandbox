@@ -43,7 +43,7 @@ You configure the chaos level, activate scenario modifiers ("tags"), adjust each
 - 🌐 **Bilingual** — full Chinese/English support (UI + LLM output)
 - 📊 **Shareable report cards** — download as image with QR code
 - 🔑 **BYOK** — bring your own API key, supports 8+ models
-- 🆓 **Free trial pool** — 20 free rounds powered by DeepSeek V3
+- 🆓 **Free trial pool** — 20 free rounds powered by DeepSeek V4 Flash
 
 <div align="center">
 <img src="https://img.shields.io/badge/Gemini-Flash-blue?logo=google" />
@@ -213,7 +213,7 @@ Create `backend/tags/your_tag.md` with the same frontmatter pattern. See existin
 
 ### Change the Scenario
 
-Edit `backend/presets.json` to change the background briefing, initial oil price, or market agent prompt. The current scenario is calibrated to real events as of April 4, 2026.
+Edit `backend/presets.json` to change the background briefing, initial oil price, or market agent prompt. The current scenario is calibrated to real events as of April 26, 2026.
 
 ---
 
@@ -221,8 +221,8 @@ Edit `backend/presets.json` to change the background briefing, initial oil price
 
 | Provider | Models | Notes |
 |----------|--------|-------|
+| DeepSeek | `deepseek/deepseek-v4-flash`, `deepseek/deepseek-chat`, `deepseek/deepseek-reasoner` | **Default model** (V4 Flash) — no region restrictions |
 | Google Gemini | `gemini/gemini-3-flash-preview`, `gemini/gemini-2.5-pro-preview-05-06` | Requires non-HK/CN region |
-| DeepSeek | `deepseek/deepseek-chat`, `deepseek/deepseek-reasoner` | **Free trial default** |
 | OpenAI | `gpt-4o`, `gpt-4o-mini`, `o3-mini` | Best structured output |
 | Anthropic | `claude-sonnet-4-6`, `claude-haiku-4-5-20251001` | Strong reasoning |
 
@@ -325,7 +325,7 @@ MIT License.
 - 🌐 **中英双语** — UI + LLM 输出完整支持
 - 📊 **可分享的报告卡片** — 下载为图片，带二维码
 - 🔑 **BYOK 自带密钥**，支持 8+ 模型
-- 🆓 **免费试玩池** — 20 轮免费，由 DeepSeek V3 驱动
+- 🆓 **免费试玩池** — 20 轮免费，由 DeepSeek V4 Flash 驱动
 
 ### 快速开始
 

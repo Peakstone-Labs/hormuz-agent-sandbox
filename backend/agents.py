@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 # Helpers
 # ---------------------------------------------------------------------------
 
-DEFAULT_MODEL = "gemini/gemini-3-flash-preview"
+DEFAULT_MODEL = "deepseek/deepseek-v4-flash"
 
 STEP_LABEL = {
     StepUnit.day: ("Day", "days"),

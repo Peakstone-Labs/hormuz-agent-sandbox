@@ -34,7 +34,7 @@ SCENARIO_BACKGROUND = {
     "en": (BACKGROUND_DIR / "scenario_background.md").read_text(encoding="utf-8"),
     "zh": (BACKGROUND_DIR / "scenario_background_zh.md").read_text(encoding="utf-8"),
 }
-SCENARIO_CUTOFF_DATE = "2026-04-10"
+SCENARIO_CUTOFF_DATE = "2026-04-26"
 
 # Load souls and tags from markdown files
 ACTORS = load_souls()

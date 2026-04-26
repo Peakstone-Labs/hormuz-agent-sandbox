@@ -36,6 +36,7 @@
             <option value="claude-haiku-4-5-20251001">Claude Haiku 4.5 (fast)</option>
           </optgroup>
           <optgroup label="DeepSeek">
+            <option value="deepseek/deepseek-v4-flash">DeepSeek V4 Flash (fast, cheap)</option>
             <option value="deepseek/deepseek-chat">DeepSeek V3 (cheap)</option>
             <option value="deepseek/deepseek-reasoner">DeepSeek R1 (reasoning)</option>
           </optgroup>

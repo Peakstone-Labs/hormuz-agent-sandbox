@@ -16,16 +16,16 @@ i18n:
 
 # Simple vs Hard Victory
 
-The US faces a fundamental strategic fork, and the choice defines the entire war's trajectory.
+The US faces a fundamental strategic fork, and the choice defines the entire war's trajectory. **Trump's Apr 22 "3-5 day" ultimatum has lapsed. His Apr 25 cancellation of the Witkoff/Kushner trip says "Iran offered a lot, but not enough." The fork is live again.**
 
-**Simple Victory:** Reopen the Strait of Hormuz, escort shipping, declare "mission accomplished." Iran also claims regime stability. Quick, face-saving for both sides. But Israel and Gulf allies will be deeply disappointed — Iran keeps its nuclear program, its regime, and the implicit threat to close the Strait again.
+**Simple Victory:** Lift the naval blockade, restart Islamabad with a face-saving controlled-passage protocol, accept partial Iranian concessions. Iran claims regime stability and keeps its nuclear program. Quick, face-saving for both sides. But Israel and Gulf allies will be deeply disappointed — and Iran retains the implicit threat to close the Strait again.
 
-**Hard Victory:** Attempt regime change of the Iranian theocracy. As Treasury Secretary Bessent said: "Sometimes you have to escalate to de-escalate." This means sustained bombardment, potential seizure of Kharg Island, targeting civilian infrastructure to trigger internal revolt. Things get dramatically worse before they get better — if they get better at all.
+**Hard Victory:** Execute the "wide-scale destruction" threat Trump held in reserve on Apr 7 — sustained bombardment of Iranian bridges, power plants, desalination facilities; potential seizure of Kharg Island; targeting civilian infrastructure to trigger internal revolt. Things get dramatically worse before they get better — if they get better at all.
 
-Trump's prime-time national address on April 2 was a point of no return. Wall Street (Jamie Dimon) and the White House have reached tacit alignment on the "hard" path. Marines are in transit from Singapore.
+The original April 2 prime-time address was a point of no return. The Apr 7 ceasefire walked some of it back. But the underlying alignment (Wall Street/Jamie Dimon + White House on the "hard" path) is intact. **Crucially, the operational capability is now in place that wasn't on Apr 7**: three carrier strike groups (Ford/Lincoln/Bush), Marines arrived, ~10 Arleigh Burke destroyers under Fifth Fleet — the "hard" option is now fully available.
 
 ## Injection
 
-- **US** must explicitly choose between these paths. The "simple" path is faster and cheaper but leaves the core problem unsolved. The "hard" path requires forces that haven't fully arrived yet. Each day of indecision is a day of economic damage and political erosion.
-- **Israel** desperately wants the US on the "hard" path. If America pivots to "simple victory," Israel loses its window to eliminate Iran's nuclear program. Israel may conduct unilateral strikes to force the US's hand.
-- **Iran** benefits from US indecision. If they can make the "hard" path look too costly (aircraft losses, coalition opposition, oil price pain), the US may settle for the "simple" outcome — which Iran can live with.
+- **US** must explicitly choose between these paths. The "simple" path requires lifting the blockade — a concession Trump has so far refused. The "hard" path is now operationally possible (three CSGs in CENTCOM) but politically costly (Brent $105+, midterms approaching, no domestic appetite for a longer war). Each day of indecision is a day of economic damage and credibility erosion.
+- **Israel** desperately wants the US on the "hard" path. The Apr 25 cancellation may be Israel's window — they may launch unilateral strikes (e.g., on Iranian assets in Syria) to force US escalation, or escalate the Lebanon front to force the issue.
+- **Iran** benefits from US indecision but also fears the "hard" path becoming actionable now that forces are in position. The IRGC hardliner faction may push to escalate first (full Hormuz re-closure, Houthi activation) to demonstrate cost; the pragmatist faction may rush a unified proposal to give Trump an off-ramp.
